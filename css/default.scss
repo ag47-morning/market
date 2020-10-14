@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* 추가 */
+@font-face {
+    font-family: 'paybooc-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'paybooc-ExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-ExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+$fr : 'paybooc-Medium', serif;
+$fb : 'paybooc-ExtraBold', serif;
+$mainC : #2c2c2c;
+$backC : #fdfdfd;
+$pointC : #E7147E;
+
+/* 추가 끝 */
+
+/* 초기화 { */
+
+html{overflow-y: scroll;}
+html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0;}
+body {margin: 0; padding: 0; font-size: 0.8em; background: $backC;} //body 글씨크기
+h1, h2, h3, h4, h5, h6 {font-size: 1.2em; font-family: $fb;} // h 글씨크기
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block; }
+ul, dl, dt, dd, ol {margin: 0; padding: 0; list-style: none; }
+legend {position: absolute; margin: 0; padding: 0; font-size: 0; line-height: 0; text-indent: -9999em; overflow: hidden; }
+label, input, button, select, img {vertical-align: middle;font-size: 1.1em; }
+input, button { margin: 0; padding: 0; outline: none; font-size: 1.1em; } //btn 글씨크기
+input[type="submit"], button {cursor: pointer; }
+textarea, select {font-size: 1.1em;} // textarea 글씨크기
+select {margin: 0;}
+p {margin: 0; padding: 0; word-break: break-all; }
+hr {display: none; }
+pre {overflow-x: scroll; font-size: 1.2em; }
+table {border-collapse: collapse; border-spacing: 0;}
+a {color: #000; text-decoration: none;}
+*, :after, :before {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, p, span, pre, i, b, a {font-weight: normal; font-style: normal; font-family: $fr;}
+/* } 초기화 끝  */
+
+/* 레이아웃 크기 */
+#index { max-width: 1200px; margin: 0 auto; position: relative; overflow: hidden;}
+#hd{ width: 25%; min-width: 200px;}
+#container {width: 75%;}
+#ft {width: 100%;}
+
+/* 공통 */
+.sound_only {position: absolute; font-size: 0; line-height: 0; overflow: hidden !important; display: inline-block !important; top: 0; left: 0; width: 0; height: 0; margin: 0 !important; padding: 0 !important; border: 0;}
+
+/* 상단 레이아웃 */
+
+#hd {height: 100%; box-sizing: border-box; padding: 50px 20px 0; background: $mainC; color: #fff; position: absolute; top: 0; left: 0;}
+#hd:after {display: block; clear: both; visibility: hidden; content: '';}
+
+#logo {
+    width: 100%; margin-bottom: 50px; text-align: center;
+    img {width: 100%; height: auto; max-width: 180px;}
+}
+#gnb {
+    width: 100%; margin-bottom: 50px;
+    .gnb_li {
+        font-size: 1.4em; font-family: $fb; padding: 5px 0;
+        a {display: inline-block; width: 100%; line-height: 20px; color: #fff; padding: 10px 0;}
+    }
+}
+#sns {
+    width: 100%; 
+}
+
+
+/* 중단 레이아웃 */
+#container {float: right; box-sizing: border-box;}
+#container:after {display: block; clear: both; visibility: hidden; content: '';}
+
+/* 하단 레이아웃 */
+#ft {background: $mainC;}
+#ft_wr {padding: 10px 0; text-align: center;}
