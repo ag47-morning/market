@@ -6,42 +6,44 @@
     <title>personal homepage</title>
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/respon.css">
+    <link rel="stylesheet" href="asset/font-awesome/css/font-awesome.css">
 </head>
 <body>
     <div id="index">
         <div id="hd_m">
             <h1 class="sound_only">모바일 메뉴</h1>
-            <button id="gnb_btn">x</button>
             <div id="logo_m">
                 <a href="index.html"><img src="http://placehold.it/150x50" alt="document"></a>
             </div>
-            <a href="#">i</a>
+            <a href="#" class="gnb_btn user_btn"><i class="fa fa-user"><span class="sound_only">로그인</span></i></a>
         </div>
         <aside id="hd">
             <h1 class="sound_only">메인 메뉴</h1>
+            <button id="tnb_btn"class="gnb_btn gnb_open"><i class="fa fa-bars"><span class="sound_only">메뉴열기</span></i></button>
             <div id="logo">
                 <a href="index.html"><img src="http://placehold.it/150x60" alt="document"></a>
             </div>
             <nav id="gnb">
                 <ul class="gnb_ol">
-                    <li class="gnb_li"><a href="#">menu1</a></li>
-                    <li class="gnb_li"><a href="#">menu2</a></li>
-                    <li class="gnb_li"><a href="#">menu3</a></li>
+                    <li class="gnb_li"><a href="#">제품소개</a></li>
+                    <li class="gnb_li"><a href="#">제품후기</a></li>
+                    <li class="gnb_li"><a href="#">제품상담</a></li>
                 </ul>
             </nav>
             <div id="sns">
-                <p>Lorem ipsum dolor sit.</p>
-                <p>Lorem ipsum dolor sit.</p>
+                <a href="#"><img src="img/kakaotalk.png" alt=""> 카카오톡</a>
+                <a href="#"><img src="img/kakaostory.png" alt=""> 카카오스토리</a>
+                <a href="#"><img src="img/band.png" alt=""> 네이버 밴드</a>
             </div>
             <div id="bank">
                 <h3>bank info</h3>
-                <p>bank address</p>
-                <p>123456-78-901234</p>
+                <p class="bank_name">국민은행 홍길동</p>
+                <p class="bank_add">123456 - 78 - 901234</p>
             </div>
         </aside>
         <div class="back"></div>
         <div id="container">
-            <div class="up_wr">
+            <div class="con up_wr">
                 <div class="slide">
                     <div class="slide_wr">
                         <a href="#"><img src="http://placehold.it/486x486/ff0" alt=""></a>
@@ -55,13 +57,20 @@
                     </div>
                 </div>
                 <div class="banner">
-                    <a href="#"><img src="http://placehold.it/230x150" alt=""></a>
-                    <a href="#"><img src="http://placehold.it/230x150" alt=""></a>
-                    <a href="#"><img src="http://placehold.it/480x310" alt=""></a>
+                    <div class="ban_wr">
+                        <a href="#"><img src="http://placehold.it/230x150" alt=""></a>
+                        <a href="#"><img src="http://placehold.it/230x150" alt=""></a>
+                        <a href="#"><img src="http://placehold.it/480x310" alt=""></a>
+                    </div>
                 </div>
             </div>
-            <div class="down_wr">
-                
+            <div class="con down_wr">
+                <h3>제품 후기<a href="#">더보기</a></h3>
+                <ul class="down_pic">
+                    <li><a href="#"><img src="http://placehold.it/480x300"></a></li>
+                    <li><a href="#"><img src="http://placehold.it/480x380"></a></li>
+                    <li><a href="#"><img src="http://placehold.it/480x300"></a></li>
+                </ul>
             </div>
             <div id="ft">
                 <div id="ft_wr">

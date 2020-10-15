@@ -12,8 +12,39 @@
   font-style: normal; }
 /* 추가 끝 */
 /* 상단 레이아웃 */
+.gnb_btn {
+  position: absolute;
+  background: #2c2c2c;
+  color: #fdfdfd;
+  border: 0;
+  font-size: 1.5em;
+  padding: 15px;
+  outline: none;
+  line-height: 20px;
+  top: 10px;
+  height: 50px; }
+
+.gnb_btn:hover {
+  color: #E7147E; }
+
 #hd_m {
+  display: none;
+  background: #2c2c2c;
+  padding: 10px 20px;
+  text-align: center;
+  position: relative; }
+  #hd_m .user_btn {
+    right: 10px; }
+
+#hd #tnb_btn {
+  right: -56px;
   display: none; }
+
+#hd_m:after {
+  display: block;
+  clear: both;
+  visibility: hidden;
+  content: ''; }
 
 .back {
   width: 100%;
@@ -24,17 +55,20 @@
   left: 0;
   display: none; }
 
-@media (max-width: 850px) {
+@media (max-width: 950px) {
   #hd {
     position: fixed;
     top: 0;
     left: -50%;
-    width: 50%;
-    z-index: 999; } }
+    width: 50%; }
+
+  #hd #tnb_btn {
+    display: block; } }
 /* 중단 레이아웃 */
-@media (max-width: 850px) {
+@media (max-width: 950px) {
   #container {
-    width: 100%; }
+    width: 100%;
+    padding: 0 10px; }
 
   #hd_m {
     display: block; } }

@@ -24,7 +24,7 @@ $pointC : #E7147E;
 
 html{overflow-y: scroll;}
 html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0;}
-body {margin: 0; padding: 0; font-size: 0.8em; background: $backC;} //body 글씨크기
+body {margin: 0; padding: 0; font-size: 0.9em; background: $backC;} //body 글씨크기
 h1, h2, h3, h4, h5, h6 {font-size: 1.2em; font-family: $fb;} // h 글씨크기
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block; }
 ul, dl, dt, dd, ol {margin: 0; padding: 0; list-style: none; }
@@ -34,7 +34,7 @@ input, button { margin: 0; padding: 0; outline: none; font-size: 1.1em; } //btn 
 input[type="submit"], button {cursor: pointer; }
 textarea, select {font-size: 1.1em;} // textarea 글씨크기
 select {margin: 0;}
-p {margin: 0; padding: 0; word-break: break-all; }
+p {margin: 0; padding: 0; word-break: keep-all; }
 hr {display: none; }
 pre {overflow-x: scroll; font-size: 1.2em; }
 table {border-collapse: collapse; border-spacing: 0;}
@@ -45,8 +45,8 @@ body, p, span, pre, i, b, a {font-weight: normal; font-style: normal; font-famil
 
 /* 레이아웃 크기 */
 #index { max-width: 1200px; margin: 0 auto; position: relative; overflow: hidden;}
-#hd{ width: 25%; min-width: 200px;}
-#container {width: 75%;}
+#hd{ width: 20%; min-width: 150px;}
+#container {width: 80%;}
 #ft {width: 100%;}
 
 /* 공통 */
@@ -54,7 +54,7 @@ body, p, span, pre, i, b, a {font-weight: normal; font-style: normal; font-famil
 
 /* 상단 레이아웃 */
 
-#hd {height: 100%; box-sizing: border-box; padding: 50px 20px 0; background: $mainC; color: #fff; position: absolute; top: 0; left: 0;}
+#hd {height: 100%; box-sizing: border-box; padding: 50px 20px 0; background: $mainC; color: #fff; position: absolute; top: 0; left: 0; z-index: 999;}
 #hd:after {display: block; clear: both; visibility: hidden; content: '';}
 
 #logo {
@@ -62,20 +62,59 @@ body, p, span, pre, i, b, a {font-weight: normal; font-style: normal; font-famil
     img {width: 100%; height: auto; max-width: 180px;}
 }
 #gnb {
-    width: 100%; margin-bottom: 50px;
+    width: 100%; margin-bottom: 30%;
     .gnb_li {
-        font-size: 1.4em; font-family: $fb; padding: 5px 0;
-        a {display: inline-block; width: 100%; line-height: 20px; color: #fff; padding: 10px 0;}
+        font-size: 1.3em; font-family: $fb; padding: 5px 0;
+        a {display: inline-block; width: 100%; line-height: 20px; color: #fff; padding: 10px 0; transition: color .2s; position: relative;}
+        a:after {content:''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: $pointC; transition: width .2s;}
+        &:hover a {color: $pointC;}
+        &:hover a:after{width: 50%;}
     }
 }
 #sns {
-    width: 100%; 
+    margin-bottom: 40%;
+    a{display: block; color: $backC; margin: 10px 0;}
+    a:hover {color: $pointC;}
+    img {width: 20px; margin-right: 5px;}
 }
-
+#bank {
+    h3{text-transform: uppercase; margin-bottom: 10px; font-size: 1.3em;}
+    p{line-height: 2;}
+    p.bank_name{font-size: 1.15em;}
+}
 
 /* 중단 레이아웃 */
 #container {float: right; box-sizing: border-box;}
 #container:after {display: block; clear: both; visibility: hidden; content: '';}
+.con {width: 100%; margin-bottom: 20px;}
+.con:after {display: block; clear: both; visibility: hidden; content: '';}
+.up_wr {
+    display: flex; display: -webkit-flex; justify-content: space-between; -webkit-justify-content: space-between;
+    > div {display: flexbox; width: 49%; margin: 10px;}
+}
+.slide_wr{
+    width: 100%; overflow: hidden; position: relative; height: 100%;
+    &:after {content:''; display: block; padding-bottom: 100%;}
+    a {position: absolute; top: 0; left: 100%;}
+    a:nth-child(1){left: 0;}
+    img{width: 100%;}
+}
+.ban_wr{
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-content: space-between; width: 100%; height: 100%; -webkit-justify-content: space-between;
+    a {display: flexbox; width: 49%;}
+    a:last-child {flex-grow: 2;}
+    img {width: 100%;}
+}
+.down_wr h3 {
+    margin: 0 10px 10px; font-size: 2em; border-bottom: 2px solid $mainC; padding-bottom: 5px; position: relative;
+    a {position: absolute; font-size: 0.4em; padding: 5px; display: inline-block; border-radius: 5px; border: 1px solid #ccc; color: #cccc; right: 0; top: 5px; transition: .3s;}
+    a:hover {color: $backC; background: $mainC; border-color: $mainC;}
+}
+.down_pic {
+    display: flex; justify-content: space-between; display: -webkit-flex; -webkit-justify-content: space-between; align-items: center;
+    li {display: flexbox; width: 33%; margin: 10px;}
+    img{width: 100%;}
+}
 
 /* 하단 레이아웃 */
 #ft {background: $mainC;}
